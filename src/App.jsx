@@ -2,18 +2,18 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [output, setOutput] = useState("");
+  const [result, setResult] = useState("");
 
   const alphabets = Array.from({ length: 26 }, (_, i) =>
     String.fromCharCode(65 + i)
   );
 
   const handleClick = (letter) => {
-    setOutput((prev) => prev + letter);
+    setResult((prev) => prev + letter);
   };
 
   const handleBackspace = () => {
-    setOutput((prev) => prev.slice(0, -1));
+    setResult((prev) => prev.slice(0, -1));
   };
 
   return (
@@ -22,7 +22,9 @@ function App() {
         <h1>Alphabet Buttons</h1>
         <p>Click letters</p>
 
-        <div className="output" data-testid="output">{output}</div>
+        <div className="output" data-testid="output">
+          {result}
+        </div>
 
         <div className="backspace-row">
           <button className="key" onClick={handleBackspace}>
