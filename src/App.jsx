@@ -22,7 +22,7 @@ function App() {
         <h1>Alphabet Buttons</h1>
         <p>Click letters</p>
 
-        <div className="output">{output}</div>
+        <div className="output" data-testid="output">{output}</div>
 
         <div className="backspace-row">
           <button className="key" onClick={handleBackspace}>
