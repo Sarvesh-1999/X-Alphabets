@@ -3,6 +3,7 @@ import "./App.css";
 
 function App() {
   const [result, setResult] = useState("");
+  
 
   const alphabets = Array.from({ length: 26 }, (_, i) =>
     String.fromCharCode(65 + i)
@@ -29,7 +30,7 @@ function App() {
 
         <div className="backspace-row">
           <button
-            className="key"
+            className="backspace"
             data-testid="backspace"
             onClick={handleBackspace}
           >
