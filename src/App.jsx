@@ -22,12 +22,17 @@ function App() {
         <h1>Alphabet Buttons</h1>
         <p>Click letters</p>
 
-        <div className="output" data-testid="output">
+        {/* Output should be a <p> */}
+        <p className="output" data-testid="output">
           {result}
-        </div>
+        </p>
 
         <div className="backspace-row">
-          <button className="key" onClick={handleBackspace}>
+          <button
+            className="key"
+            data-testid="backspace"
+            onClick={handleBackspace}
+          >
             Backspace
           </button>
         </div>
@@ -37,6 +42,7 @@ function App() {
             <button
               key={letter}
               className="key"
+              data-testid={`button-${letter}`}
               onClick={() => handleClick(letter)}
             >
               {letter}
